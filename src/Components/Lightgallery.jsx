@@ -5,7 +5,7 @@ import "lightgallery/css/lightgallery.css";
 // css
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-video.css";
-import "lightgallery/css/lg-share.css";
+// import "lightgallery/css/lg-share.css";
 import "lightgallery/css/lg-rotate.css";
 import "lightgallery/css/lg-autoplay.css";
 import "lightgallery/css/lg-thumbnail.css";
@@ -13,7 +13,7 @@ import "lightgallery/css/lg-thumbnail.css";
 // plugins
 import lgZoom from "lightgallery/plugins/zoom";
 import lgVideo from "lightgallery/plugins/video";
-import lgShare from "lightgallery/plugins/Share";
+// import lgShare from "lightgallery/plugins/Share";
 import lgRotate from "lightgallery/plugins/rotate";
 import lgAutoplay from "lightgallery/plugins/autoplay";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
@@ -81,7 +81,7 @@ const gallery = [
         Gallery of Growth
       </p>
       <LightGallery
-        plugins={[lgZoom, lgVideo,lgShare,lgAutoplay,lgRotate,lgThumbnail]}
+        plugins={[lgZoom, lgVideo,lgAutoplay,lgRotate,lgThumbnail]}
         mode="lg-fade"
         pager={false}
         thumbnail={true}
