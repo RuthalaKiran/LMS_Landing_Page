@@ -10,6 +10,7 @@ import SocialCountersSection from "../Components/SocialCountersSection";
 import Footer from "../Components/Footer";
 import Contactus from "../Components/Contactus";
 import Aboutus from "../Components/Aboutus"
+import Heroslide from "../Components/Heroslide";
 
 const Home = () => {
   return (
@@ -17,10 +18,11 @@ const Home = () => {
       <div
         className=""
         style={{
-          background: "linear-gradient(293deg, #f7f7f7 0%, #fffae0 100%)",
+          background: "linear-gradient(259deg,rgba(242, 240, 237, 1) 0%, rgba(181, 243, 255, 1) 100%)",
         }}
       >
         <Navbar />
+        <Heroslide/>
         <Herosection />
         <Categories />
         <Aboutus/>

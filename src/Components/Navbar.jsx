@@ -33,16 +33,14 @@ const Navbar = () => {
   return (
     <div
       className={`w-full transition-all duration-300 ${
-        isSticky
-          ? "fixed top-0 left-0 z-50 bg-[#FFF6EF] shadow-lg"
-          : "relative"
+        isSticky ? "fixed top-0 left-0 z-50 bg-[linear-gradient(259deg,rgba(242,240,237,1)0%,rgba(181,243,255,1)100%)] shadow-lg" : "relative"
       } px-4 sm:px-10 md:px-12 lg:px-24 py- flex flex-col md:flex-row md:items-center md:justify-between`}
     >
       {/* Logo and Hamburger (Mobile) */}
       <div className="flex items-center justify-between w-full md:w-auto">
         <div className="logo">
           <a href="/">
-            <img className="w-12 md:w-20" src={logo} alt="Codeneksa Logo" />
+            <img className="w-12 md:w-24" src={logo} alt="Codeneksa Logo" />
           </a>
         </div>
         {/* Hamburger Icon for Mobile */}
@@ -75,7 +73,7 @@ const Navbar = () => {
           isMenuOpen ? "flex" : "hidden"
         } md:flex flex-col md:flex-row items-center md:gap-10 mt-4 md:mt-0 w-full md:w-auto bg-[#FFF6EF] md:bg-transparent`}
       >
-        <ul className="flex flex-col md:flex-row gap-4 md:gap-10 w-full md:w-auto">
+        <ul className="text-lg flex flex-col md:flex-row gap-4 md:gap-10 w-full md:w-auto">
           <li>
             <a
               className="block text-center md:text-left text-[#2c2c54] hover:bg-orange-100 px-2 py-1 rounded-lg"
@@ -115,7 +113,7 @@ const Navbar = () => {
       <button
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } md:flex border-[3px] border-blue-400 hover:outline outline-blue-700 duration-200 py-1 px-4 rounded-full mt-4 md:mt-0 w-full md:w-auto md:max-w-[150px] justify-center text-[#2c2c54]`}
+        } text-lg md:flex border-[3px] border-blue-400 hover:outline outline-blue-700 duration-200 py-1 px-4 rounded-full mt-4 md:mt-0 w-full md:w-auto md:max-w-[150px] justify-center text-[#2c2c54]`}
       >
         LMS Login
       </button>

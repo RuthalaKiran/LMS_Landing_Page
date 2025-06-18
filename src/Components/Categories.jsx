@@ -40,7 +40,7 @@ const Categories = () => {
         {categories.map((item, index) => (
           <div
             key={item.id}
-            className={`px-4 sm:px-6 md:px-5 lg:px-10 group hover:bg-[#2c2c54]   cursor-pointer bg-gray-200 flex items-center gap-3 sm:gap-4 md:gap-5 py-4 sm:py-5 md:py-7 rounded-md  duration-200  ${
+            className={`px-4 sm:px-6 md:px-5 lg:px-10 group hover:bg-[#2c2c54]   cursor-pointer bg-gray-300 flex items-center gap-3 sm:gap-4 md:gap-5 py-4 sm:py-5 md:py-7 rounded-md  duration-200  ${
               inView ? `animate-slide-in delay-${index * 100}` : "opacity-0"
             }`}
           >
