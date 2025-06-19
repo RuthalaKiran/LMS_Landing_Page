@@ -9,23 +9,20 @@ import Categories from "../Components/Categories";
 import SocialCountersSection from "../Components/SocialCountersSection";
 import Footer from "../Components/Footer";
 import Contactus from "../Components/Contactus";
-import Aboutus from "../Components/Aboutus"
+import Aboutus from "../Components/Aboutus";
 import Heroslide from "../Components/Heroslide";
+import Collegecollaboration from "../Components/Collegecollaboration";
 
 const Home = () => {
   return (
     <div>
-      <div
-        className=""
-        style={{
-          background: "linear-gradient(147deg,rgba(255, 209, 122, 1) 0%, rgba(220, 240, 242, 1) 100%)",
-        }}
-      >
+      <div className="bg-gray-100">
         <Navbar />
-        <Heroslide/>
+        <Heroslide />
+        <Collegecollaboration />
         <Herosection />
         <Categories />
-        <Aboutus/>
+        <Aboutus />
         <WhyCodeneksaSection />
         <Recognizedby />
         <Collaboration />

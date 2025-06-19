@@ -26,9 +26,20 @@ const Collaboration = () => {
 
   return (
     <section className="mx-4 sm:mx-6 md:mx-12 lg:mx-28 py-8 sm:py-10 md:py-12">
-      <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center pb-4 sm:pb-5 md:pb-6">
-        Our Collaborations
-      </h1>
+      <div className="relative">
+        <svg
+          className="animate-float-left-right absolute -top-10 left-20 w-8 h-8 text-blue-500 opacity-50 rotate-12"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="12" cy="12" r="12" />
+        </svg>
+        <h1 className="text-3xl md:text-4xl font-bold text-[#2c2c54] text-center pb-4 relative">
+          Our Collaborations
+          <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-[#ff5733] rounded-full"></span>
+        </h1>
+      </div>
+
       <div className="py-4 sm:py-5 md:py-6">
         <Banner images={images} speed={20000} />
       </div>

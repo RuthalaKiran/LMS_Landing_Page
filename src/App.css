@@ -22,3 +22,20 @@
 .animate-fade-in-up {
   animation: fade-in-up 0.7s ease-out forwards;
 }
+
+
+@keyframes floatLeftRight {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.animate-float-left-right {
+  animation: floatLeftRight 6s ease-in-out infinite;
+}

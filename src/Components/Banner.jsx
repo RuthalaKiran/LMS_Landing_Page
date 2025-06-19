@@ -9,9 +9,9 @@ const Banner = ({ images, speed = 5000 }) => {
           style={{ "--speed": `${speed}ms` }}
         >
           {images.map(({ id, image, alt }) => (
-            <div key={id} className="flex-shrink-0 px-2 sm:px-3 md:px-4">
+            <div key={id} className="flex-shrink-0 px-4 sm:px-6 md:px-14">
               <img
-                className="h-20 sm:h-24 md:h-28 w-auto max-w-[120px] sm:max-w-[160px] md:max-w-[200px] object-contain"
+                className="h-24 sm:h-28 md:h-32 w-auto max-w-[140px] sm:max-w-[180px] md:max-w-[220px] object-contain"
                 src={image}
                 alt={alt}
               />
@@ -23,9 +23,9 @@ const Banner = ({ images, speed = 5000 }) => {
           style={{ "--speed": `${speed}ms` }}
         >
           {images.map(({ id, image, alt }) => (
-            <div key={id} className="flex-shrink-0 px-2 sm:px-3 md:px-4">
+            <div key={id} className="flex-shrink-0 px-4 sm:px-6 md:px-14">
               <img
-                className="h-20 sm:h-24 md:h-28 w-auto max-w-[120px] sm:max-w-[160px] md:max-w-[200px] object-contain"
+                className="h-24 sm:h-28 md:h-32 w-auto max-w-[140px] sm:max-w-[180px] md:max-w-[220px] object-contain"
                 src={image}
                 alt={alt}
               />
@@ -37,9 +37,9 @@ const Banner = ({ images, speed = 5000 }) => {
           style={{ "--speed": `${speed}ms` }}
         >
           {images.map(({ id, image, alt }) => (
-            <div key={id} className="flex-shrink-0 px-2 sm:px-3 md:px-4">
+            <div key={id} className="flex-shrink-0 px-4 sm:px-6 md:px-14">
               <img
-                className="h-20 sm:h-24 md:h-28 w-auto max-w-[120px] sm:max-w-[160px] md:max-w-[200px] object-contain"
+                className="h-24 sm:h-28 md:h-32 w-auto max-w-[140px] sm:max-w-[180px] md:max-w-[220px] object-contain"
                 src={image}
                 alt={alt}
               />

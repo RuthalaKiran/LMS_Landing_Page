@@ -19,8 +19,8 @@ const Herosection = () => {
   }, []);
 
   return (
-    <section className="relative mb-5 overflow-hidden">
-      <div className="px-4 sm:px-10 md:px-12 lg:px-24 w-full flex flex-col md:flex-row items-center py-2 sm:py-12 md:py-16">
+    <section className=" relative mb-5 overflow-hidden">
+      <div className="px-4 sm:px-10 md:px-12 lg:px-24 w-full flex flex-col md:flex-row items-center py-2 sm:py-0">
         {/* Left Section */}
         <div className="w-full md:w-1/2 space-y-4 sm:space-y-6 mt-6 sm:mt-8 md:mt-10 flex flex-col md:gap-20">
           <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-relaxed text-[#2c2c54]">

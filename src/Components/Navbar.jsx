@@ -33,7 +33,9 @@ const Navbar = () => {
   return (
     <div
       className={`w-full transition-all duration-300 ${
-        isSticky ? "fixed top-0 left-0 z-50 bg-[#FFD17A] shadow-lg" : "relative"
+        isSticky
+          ? "fixed top-0 left-0 z-50 bg-gray-100 shadow-lg"
+          : "relative"
       } px-4 sm:px-10 md:px-12 lg:px-24 py- flex flex-col md:flex-row md:items-center md:justify-between`}
     >
       {/* Logo and Hamburger (Mobile) */}
@@ -71,7 +73,7 @@ const Navbar = () => {
       <nav
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } md:flex flex-col md:flex-row items-center md:gap-10 mt-4 md:mt-0 w-full md:w-auto bg-[#FFF6EF] md:bg-transparent`}
+        } md:flex flex-col md:flex-row items-center md:gap-10 mt-4 md:mt-0 w-full md:w-auto bg-gray-100s`}
       >
         <ul className="text-lg flex flex-col md:flex-row gap-4 md:gap-10 w-full md:w-auto">
           <li>

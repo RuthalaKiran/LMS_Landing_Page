@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
+import { gsap } from "gsap";
+
+// Assets
 import datascience from "../assets/datascience.png";
 import python from "../assets/python.png";
 import cplus from "../assets/cplus.png";
@@ -16,6 +19,8 @@ const Categories = () => {
     threshold: 0.2,
   });
 
+  const cardsRef = useRef([]);
+
   const categories = [
     { id: 1, course: "Cloud Computing", img: cloud },
     { id: 2, course: "Full Stack", img: fullstack },
@@ -28,66 +33,72 @@ const Categories = () => {
     { id: 9, course: "Data Science", img: datascience },
   ];
 
+  useEffect(() => {
+    if (inView) {
+      cardsRef.current.forEach((card, i) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            delay: i * 0.1,
+          }
+        );
+      });
+    }
+  }, [inView]);
+
   return (
     <section
       ref={ref}
-      className="mx-4 sm:mx-6 md:mx-12 lg:mx-24 py-8 sm:py-10 md:py-12"
+      className="mx-4 sm:mx-6 md:mx-12 lg:mx-24 py-12 sm:py-16 md:py-20 bg-gradient-to-br"
     >
-      <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center pb-6 sm:pb-8 md:pb-10 text-[#2c2c54]">
-        Our Categories
+      <h1 className="text-3xl md:text-4xl font-bold text-[#2c2c54] text-center pb-4 relative">
+        Our Courses Offered
+        <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-[#ff5733] rounded-full"></span>
+        {/* Left SVG - Star */}
+        <svg
+          className="animate-float-left-right absolute left-0 top-0 -translate-y-1/2 -translate-x-4 w-6 h-6 text-[#ff5733] opacity-70"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21 12 17.77 5.82 21 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
+        {/* Right SVG - Curve */}
+        <svg
+          className="animate-float-left-right absolute right-0 top-0 -translate-y-1/2 translate-x-4 w-6 h-6 text-[#ff5733] opacity-70"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+          <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
+        </svg>
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-10">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12">
         {categories.map((item, index) => (
           <div
             key={item.id}
-            className={`px-4 sm:px-6 md:px-5 lg:px-10 group hover:bg-[#2c2c54]   cursor-pointer bg-gray-300 flex items-center gap-3 sm:gap-4 md:gap-5 py-4 sm:py-5 md:py-7 rounded-md  duration-200  ${
-              inView ? `animate-slide-in delay-${index * 100}` : "opacity-0"
-            }`}
+            ref={(el) => (cardsRef.current[index] = el)}
+            className="relative bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex items-center gap-4 cursor-pointer group"
           >
             <img
-              className="w-12 sm:w-14 md:w-16 object-cover"
+              className="w-16 h-16 object-contain transition-transform group-hover:scale-110 duration-300"
               src={item.img}
               alt={item.course}
             />
-            <p className="text-sm sm:text-base md:text-lg text-[#2c2c54] group-hover:text-white duration-200 ">
+            <p className="text-lg sm:text-xl font-medium text-[#2c2c54] group-hover:text-white transition duration-300">
               {item.course}
             </p>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#2c2c54] to-[#ff5733] rounded-xl opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-[-1]"></div>
           </div>
         ))}
       </div>
-
-      {/* Animation Styles */}
-      <style>{`
-        @keyframes slide-in {
-          0% {
-            transform: translateY(20px);
-            opacity: 0;
-          }
-          100% {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-        .animate-slide-in {
-          animation: slide-in 0.5s ease-out forwards;
-        }
-        .delay-0 { animation-delay: 0ms; }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-        .delay-400 { animation-delay: 400ms; }
-        .delay-500 { animation-delay: 500ms; }
-        .delay-600 { animation-delay: 600ms; }
-        .delay-700 { animation-delay: 700ms; }
-        .delay-800 { animation-delay: 800ms; }
-        @media (prefers-reduced-motion: reduce) {
-          .animate-slide-in {
-            animation: none;
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-      `}</style>
     </section>
   );
 };
