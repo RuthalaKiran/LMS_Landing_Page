@@ -5,26 +5,33 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import img1 from "../assets/img17.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img18.jpg";
+import img2 from "../assets/img6.jpg";
+import img3 from "../assets/img10.jpg";
+import img4 from "../assets/img18.jpg";
 
 const sliderData = [
   {
     id: 1,
     img: img1,
-    desc: "Explore coding basics with our beginner-friendly courses.",
+    desc: "A proud moment: Our MLA joins Codeneksa to inaugurate the journey of innovation.",
   },
   {
     id: 2,
     img: img2,
-    desc: "Master web development with hands-on projects.",
+    desc: "Empowering young minds through interactive classroom teaching.",
   },
   {
     id: 3,
     img: img3,
-    desc: "Dive into advanced programming techniques.",
+    desc: "Celebrating milestones with our MLA and future tech leaders at Codeneksa.",
+  },
+  {
+    id: 4,
+    img: img4,
+    desc: "Honoring collaboration with our MLA to inspire the next generation of coders.",
   },
 ];
+
 
 const Heroslide = () => {
   return (

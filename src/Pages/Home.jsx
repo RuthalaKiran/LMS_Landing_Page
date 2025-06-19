@@ -12,6 +12,7 @@ import Contactus from "../Components/Contactus";
 import Aboutus from "../Components/Aboutus";
 import Heroslide from "../Components/Heroslide";
 import Collegecollaboration from "../Components/Collegecollaboration";
+import Articles from "../Components/Articles";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
         <Categories />
         <Aboutus />
         <WhyCodeneksaSection />
+        <Articles/>
         <Recognizedby />
         <Collaboration />
         <Lightgallery />
