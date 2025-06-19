@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCreative } from 'swiper/modules';
+import { EffectCreative, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 
@@ -12,46 +12,44 @@ import article5 from "../assets/articles/article5.jpg";
 import article6 from "../assets/articles/article6.jpg";
 
 const Articles = () => {
-const articles = [
-  {
-    id: 1,
-    image: article1,
-    title: "Empowering Students Through Training",
-    desc: "Our expert-led training session aimed to equip students with essential technical skills, boosting their confidence and preparing them to face real-world industry challenges with clarity and determination.",
-  },
-  {
-    id: 2,
-    image: article2,
-    title: "Interactive Skill Development Session",
-    desc: "Students participated in an engaging, hands-on learning environment where they were encouraged to explore new coding concepts, collaborate in teams, and develop projects that reflect current industry needs.",
-  },
-  {
-    id: 3,
-    image: article3,
-    title: "40 Students Selected at Vivek Degree College",
-    desc: "A milestone achievement as 40 bright students from Vivek Degree College secured placements through our structured guidance, interview preparation, and industry-focused training programs.",
-  },
-  {
-    id: 4,
-    image: article4,
-    title: "Successful Job Drive Event",
-    desc: "Our job drive connected talented students with multiple hiring companies, creating valuable employment opportunities and opening doors for them to launch their careers with confidence.",
-  },
-  {
-    id: 5,
-    image: article5,
-    title: "Free Intensive Program at Vivek Degree College",
-    desc: "We conducted a completely free intensive training initiative to support students in gaining in-demand skills, building real-time projects, and getting ready for placement opportunities across top companies.",
-  },
-  {
-    id: 6,
-    image: article6,
-    title: "Job Mela at Mandapeta Degree College",
-    desc: "The job fair at Mandapeta Degree College was a huge success, providing students access to company representatives, career counseling, and multiple placement options to kickstart their professional journey.",
-  },
-];
-
-
+  const articles = [
+    {
+      id: 1,
+      image: article1,
+      title: "Empowering Students Through Training",
+      desc: "Our expert-led training session aimed to equip students with essential technical skills, boosting their confidence and preparing them to face real-world industry challenges with clarity and determination.",
+    },
+    {
+      id: 2,
+      image: article2,
+      title: "Interactive Skill Development Session",
+      desc: "Students participated in an engaging, hands-on learning environment where they were encouraged to explore new coding concepts, collaborate in teams, and develop projects that reflect current industry needs.",
+    },
+    {
+      id: 3,
+      image: article3,
+      title: "40 Students Selected at Vivek Degree College",
+      desc: "A milestone achievement as 40 bright students from Vivek Degree College secured placements through our structured guidance, interview preparation, and industry-focused training programs.",
+    },
+    {
+      id: 4,
+      image: article4,
+      title: "Successful Job Drive Event",
+      desc: "Our job drive connected talented students with multiple hiring companies, creating valuable employment opportunities and opening doors for them to launch their careers with confidence.",
+    },
+    {
+      id: 5,
+      image: article5,
+      title: "Free Intensive Program at Vivek Degree College",
+      desc: "We conducted a completely free intensive training initiative to support students in gaining in-demand skills, building real-time projects, and getting ready for placement opportunities across top companies.",
+    },
+    {
+      id: 6,
+      image: article6,
+      title: "Job Mela at Mandapeta Degree College",
+      desc: "The job fair at Mandapeta Degree College was a huge success, providing students access to company representatives, career counseling, and multiple placement options to kickstart their professional journey.",
+    },
+  ];
 
   return (
     <div className="py-10 bg-[#f3f4f6]">
@@ -76,7 +74,11 @@ const articles = [
               rotate: [0, 0, 90],
             },
           }}
-          modules={[EffectCreative]}
+          modules={[EffectCreative, Autoplay]}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           className="rounded-xl overflow-hidden"
         >
           {articles.map((item) => (
