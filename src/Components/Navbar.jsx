@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <div
       className={`w-full transition-all duration-300 ${
-        isSticky ? "fixed top-0 left-0 z-50 bg-[linear-gradient(259deg,rgba(242,240,237,1)0%,rgba(181,243,255,1)100%)] shadow-lg" : "relative"
+        isSticky ? "fixed top-0 left-0 z-50 bg-[#FFD17A] shadow-lg" : "relative"
       } px-4 sm:px-10 md:px-12 lg:px-24 py- flex flex-col md:flex-row md:items-center md:justify-between`}
     >
       {/* Logo and Hamburger (Mobile) */}

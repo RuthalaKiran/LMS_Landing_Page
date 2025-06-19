@@ -18,7 +18,7 @@ const Home = () => {
       <div
         className=""
         style={{
-          background: "linear-gradient(259deg,rgba(242, 240, 237, 1) 0%, rgba(181, 243, 255, 1) 100%)",
+          background: "linear-gradient(147deg,rgba(255, 209, 122, 1) 0%, rgba(220, 240, 242, 1) 100%)",
         }}
       >
         <Navbar />
