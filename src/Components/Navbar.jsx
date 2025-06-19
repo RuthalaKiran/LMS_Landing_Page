@@ -36,13 +36,13 @@ const Navbar = () => {
         isSticky
           ? "fixed top-0 left-0 z-50 bg-gray-100 shadow-lg"
           : "relative"
-      } px-4 sm:px-10 md:px-12 lg:px-24 py- flex flex-col md:flex-row md:items-center md:justify-between`}
+      } px-4 sm:px-10 md:px-12 lg:px-24 py-2 flex flex-col md:flex-row md:items-center md:justify-between`}
     >
       {/* Logo and Hamburger (Mobile) */}
       <div className="flex items-center justify-between w-full md:w-auto">
         <div className="logo">
           <a href="/">
-            <img className="w-12 md:w-24" src={logo} alt="Codeneksa Logo" />
+            <img className="w-12 sm:w-20 md:w-24" src={logo} alt="Codeneksa Logo" />
           </a>
         </div>
         {/* Hamburger Icon for Mobile */}
@@ -75,7 +75,7 @@ const Navbar = () => {
           isMenuOpen ? "flex" : "hidden"
         } md:flex flex-col md:flex-row items-center md:gap-10 mt-4 md:mt-0 w-full md:w-auto bg-gray-100s`}
       >
-        <ul className="text-lg flex flex-col md:flex-row gap-4 md:gap-10 w-full md:w-auto">
+        <ul className="text-lg flex flex-col md:flex-row gap-4 lg:gap-10 w-full md:w-auto">
           <li>
             <a
               className="block text-center md:text-left text-[#2c2c54] hover:bg-orange-100 px-2 py-1 rounded-lg"

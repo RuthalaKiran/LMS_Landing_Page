@@ -61,7 +61,7 @@ const Categories = () => {
         <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-[#ff5733] rounded-full"></span>
         {/* Left SVG - Star */}
         <svg
-          className="animate-float-left-right absolute left-0 top-0 -translate-y-1/2 -translate-x-4 w-6 h-6 text-[#ff5733] opacity-70"
+          className="hidden sm:block animate-float-left-right absolute left-0 top-0 -translate-y-1/2 -translate-x-4 w-6 h-6 text-[#ff5733] opacity-70"
           viewBox="0 0 24 24"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ const Categories = () => {
         </svg>
         {/* Right SVG - Curve */}
         <svg
-          className="animate-float-left-right absolute right-0 top-0 -translate-y-1/2 translate-x-4 w-6 h-6 text-[#ff5733] opacity-70"
+          className="hidden sm:block animate-float-left-right absolute right-0 top-0 -translate-y-1/2 translate-x-4 w-6 h-6 text-[#ff5733] opacity-70"
           viewBox="0 0 24 24"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"

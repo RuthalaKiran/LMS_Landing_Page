@@ -25,10 +25,10 @@ const Collaboration = () => {
   }));
 
   return (
-    <section className="mx-4 sm:mx-6 md:mx-12 lg:mx-28 py-8 sm:py-10 md:py-12">
+    <section className="mx-4 sm:mx-6 md:mx-12 lg:mx-28 py-8 sm:py-10 md:pt-12 md:pb-0">
       <div className="relative">
         <svg
-          className="animate-float-left-right absolute -top-10 left-20 w-8 h-8 text-blue-500 opacity-50 rotate-12"
+          className="hidden sm:block animate-float-left-right absolute -top-10 left-20 w-8 h-8 text-blue-500 opacity-50 rotate-12"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
@@ -40,7 +40,7 @@ const Collaboration = () => {
         </h1>
       </div>
 
-      <div className="py-4 sm:py-5 md:py-6">
+      <div className="py-4 sm:py-5 md:pt-10 md:pb-0">
         <Banner images={images} speed={20000} />
       </div>
     </section>

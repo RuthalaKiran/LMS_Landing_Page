@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = ({ images, speed = 5000 }) => {
   return (
-    <div className="relative w-full overflow-hidden h-28 sm:h-32 md:h-40">
+    <div className="relative w-full overflow-hidden h-28  sm:h-32 md:h-40">
       <div className="flex">
         <section
           className="flex animate-swipe"

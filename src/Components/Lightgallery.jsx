@@ -155,7 +155,7 @@ const Lightgallery = () => {
 
         {/* Top-right Star SVG */}
         <svg
-          className="animate-float-left-right absolute -top-10 right-20 w-8 h-8 text-yellow-400 opacity-80 animate-pulse"
+          className="hidden sm:block animate-float-left-right absolute -top-10 right-20 w-8 h-8 text-yellow-400 opacity-80 animate-pulse"
           fill="currentColor"
           viewBox="0 0 30 30"
         >
